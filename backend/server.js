@@ -20,6 +20,9 @@ mongoose
   .catch((err) => console.log(err));
 
 app.use("/products", productRoutes);
+app.get("/", (req, res) => {
+  res.send("FashionHub API Running 🚀");
+});
 
 app.listen(5000, () => {
   console.log("Server running on port 5000");
